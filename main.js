@@ -1,74 +1,50 @@
 'use strict';
 
-const rockPaperSissor = ['rock', 'paper', 'sissors'];
+const rockPaperScissor = ['rock', 'paper', 'scissors'];
 
-const computerChoice = rockPaperSissor[Math.floor(Math.random() * rockPaperSissor.length)];
 
-// const playerChoice = prompt("Pick Rock, Paper, or Sissors")
+function computerChoice() {
+  return rockPaperScissor[Math.floor(Math.random() * rockPaperScissor.length)];
+}
+
+
 
 const h1Text = document.getElementById("header")
 
 
 function rockInput() {
-  if (rockPaperSissor[0] === computerChoice) {
-    return (h1Text.innerText = `It's a tie you both picked ${computerChoice}`)
-  } else if (rockPaperSissor[0] === 'rock' && computerChoice === 'sissors') {
-    return (h1Text.innerText = `You picked Rock computer picked ${computerChoice} you win!`)
-  } else {
-    return ((h1Text.innerText = `You picked Rock computer picked ${computerChoice} you Lose!`))
-
+  const computer = computerChoice();
+  if (rockPaperScissor[0] === computer) {
+    return (h1Text.innerText = `It's a tie you both picked ${computer}`)
+  } else if (rockPaperScissor[0] === 'rock' && computer === 'scissors') {
+    return (h1Text.innerText = `You picked Rock computer picked ${computer} you win!`)
+  } else if (rockPaperScissor[0] === 'rock' && computer === 'paper') {
+    return ((h1Text.innerText = `You picked Rock computer picked ${computer} you Lose!`))
   }
 }
+
 
 function paperInput() {
-  if (rockPaperSissor[1] === computerChoice) {
-    return (h1Text.innerText = `It's a tie you both picked ${computerChoice}`)
-  } else if (rockPaperSissor[1] === 'paper' && computerChoice === 'rock') {
-    return (h1Text.innerText = `You picked Paper computer picked ${computerChoice} you win!`)
-  } else {
-    return (h1Text.innerText = `You picked Paper computer picked ${computerChoice} you Lose!`)
-
+  const computer = computerChoice();
+  if (rockPaperScissor[1] === computer) {
+    return (h1Text.innerText = `It's a tie you both picked ${computer}`)
+  } else if (rockPaperScissor[1] === 'paper' && computer === 'rock') {
+    return (h1Text.innerText = `You picked Paper computer picked ${computer} you win!`)
+  } else if (rockPaperScissor[1] === 'paper' && computer === 'scissors') {
+    return (h1Text.innerText = `You picked Paper computer picked ${computer} you Lose!`)
   }
 }
 
-function sissorsInput() {
-  if (rockPaperSissor[2] === computerChoice) {
-    return (h1Text.innerText = `It's a tie you both picked ${computerChoice}`)
-  } else if (rockPaperSissor[2] === 'sissors' && computerChoice === 'paper') {
-    return (h1Text.innerText = `You picked Sissors computer picked ${computerChoice} you win!`)
-  } else {
-    return ((h1Text.innerText = `You picked Sissors computer picked ${computerChoice} you Lose!`))
-
+function scissorsInput() {
+  const computer = computerChoice();
+  if (rockPaperScissor[2] === computer) {
+    return (h1Text.innerText = `It's a tie you both picked ${computer}`)
+  } else if (rockPaperScissor[2] === 'scissors' && computer === 'paper') {
+    return (h1Text.innerText = `You picked Scissors computer picked ${computer} you win!`)
+  } else if (rockPaperScissor[2] === 'scissors' && computer === 'rock') {
+    return (h1Text.innerText = `You picked Scissors computer picked ${computer} you Lose!`)
   }
 }
 
 
-
-// console.log(rockPaperSissor[0])
-// // function game() {
-
-// //   if (!playerChoice) {
-// //     return "You cancelled the prompt.";
-// //   }
-
-
-// //   if (!rockPaperSissor.includes(playerChoice.toLowerCase())) {
-// //     return "Invalid choice. Please pick Rock, Paper, or Scissors.";
-// //   } if (playerChoice.toLowerCase() === computerChoice) {
-// //     return (h1Text.innerText = `It's a tie you both picked ${computerChoice.toUpperCase()}`)
-// //   } else if (
-// //     (playerChoice.toLowerCase() === 'paper' && computerChoice === 'rock') ||
-// //     (playerChoice.toLowerCase() === 'sissors' && computerChoice === 'paper') ||
-// //     (playerChoice.toLowerCase() === 'rock' && computerChoice === 'sissors')
-// //   ) {
-// //     return (h1Text.innerText = `You picked ${playerChoice} computer picked ${computerChoice} you win!`)
-// //   } else {
-// //     return (h1Text.innerText = `You picked ${playerChoice.charAt(0).toUpperCase(0)} computer picked ${computerChoice} you win!`)
-// //   }
-// // }
-
-// document.get
-
-
-
-// console.log(game())
+console.log(computerChoice())
