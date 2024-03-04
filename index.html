@@ -11,10 +11,16 @@
 
 <body>
   <h1 id="header"> Rock Paper Scissors!</h1>
+  <div class="scores">
+    <p id="playerScoreContainer">Your Score:<span id="playerScore">0</span></p>
+    <p id="drawContainer">Draw:<span id="drawScore">0</span></p>
+    <p id="computerScoreContainer">Computer Score:<span id="computerScore">0</span></p>
+
+  </div>
   <div class="buttons">
-    <button onclick="rockInput()" class="rockButton">Rock</button>
-    <button onclick="paperInput()" class="paperButton">Paper</button>
-    <button onclick="scissorsInput()" class="scissorsButton">Scissors</button>
+    <button onclick="playerInput('rock')" class="rockButton">Rock</button>
+    <button onclick="playerInput('paper')" class="paperButton">Paper</button>
+    <button onclick="playerInput('scissors')" class="scissorsButton">Scissors</button>
   </div>
 
 

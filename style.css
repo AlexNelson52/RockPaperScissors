@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -11,23 +17,7 @@ h1 {
   color: rgb(14, 175, 175)
 }
 
-.rockButton {
-  width: 100px;
-  height: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.paperButton {
-  width: 100px;
-  height: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.scissorsButton {
+button {
   width: 100px;
   height: 40px;
   font-size: 20px;
@@ -37,4 +27,19 @@ h1 {
 
 body {
   background-color: #2e2e2e;
+}
+
+
+.scores {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(177, 35, 35);
+  padding-bottom: 30px;
+}
+
+span {
+  color: rgba(255, 255, 255, 0.774)
 }
